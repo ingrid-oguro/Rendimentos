@@ -3,13 +3,13 @@ import numpy as np
 import streamlit as st
 import altair as alt
 
-#import pip
-#pip.main(["install", "openpyxl"])
+import pip
+pip.main(["install", "openpyxl"])
 PAGE_CONFIG = {"page_title": "Indicadores", "page_icon": ":label:", "layout": "wide"}
 st.set_page_config(**PAGE_CONFIG)
 
 #GRÁFICO DISICPLINA
-mf0 = pd.read_excel('/content/drive/MyDrive/Base_desempenho/mediafinal.xlsx')
+mf0 = pd.read_excel('mediafinal.xlsx')
 mf = mf0.query('NOTA <= 10')
 
 st.subheader('Média Final na Disciplina')
@@ -27,7 +27,7 @@ grafico_final = alt.Chart(disci2).mark_circle(size=100).encode(
 st.altair_chart(grafico_final, use_container_width=True)
 
 #GRÁFICO CURSO
-mg = pd.read_excel('/content/drive/MyDrive/Base_desempenho/mediageral.xlsx')
+mg = pd.read_excel('mediageral.xlsx')
 
 st.subheader('Média geral na Graduação')
 
