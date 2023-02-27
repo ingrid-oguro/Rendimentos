@@ -4,11 +4,11 @@ import plotly.express as px
 import pandas as pd
 import numpy as np
 import altair as alt
-#import pip
-#pip.main(["install", "plotly.express"])
+import pip
+pip.main(["install", "plotly.express"])
 
 #Gráfico 3
-mg = pd.read_excel('/content/drive/MyDrive/Base_desempenho/mediageral.xlsx')
+mg = pd.read_excel('mediageral.xlsx')
 
 st.subheader('Média geral semestral')
 
