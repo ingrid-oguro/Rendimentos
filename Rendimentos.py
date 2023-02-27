@@ -73,5 +73,5 @@ c = b.reset_index()
 d = c.sort_values(by=['NOTA'], ascending=False)
 
 
-
+with st.expander("Ver base"):
 st.dataframe(d.style.format({"RA": "{:.0f}"}),width=800, height=400)
